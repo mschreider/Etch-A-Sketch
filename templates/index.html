@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Etch-A-Sketch!</title>
+        <link rel="stylesheet" href="../static/main.css">
+    </head>
+    <body>
+        <div class="container"></div>
+        
+
+        <script>
+            var grid = [];
+            var row = [];
+            var x = 16;
+            var y = 16;
+            
+            for(let i=0; i<x; i++){
+                for(let j=0; i<y; j++){
+                    const container = document.getElementsByClassName("container");
+                    const box = document.createElement('div');
+
+                    box.classList.add('box');
+                    //box.setAttribute('id', 'box["${ i }"] ["${ j }"]');
+                    box.appendChild(document.createTextNode("hello"));
+                    container.appendChild(box);
+                }
+            }
+        </script>
+    </body>
+</html>

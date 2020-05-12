@@ -1,5 +1,5 @@
 .container {
-    display: flex;
+    display: grid;
 }
 
 .grid:hover {
@@ -7,8 +7,6 @@
 }
 .grid {
     border: 1px solid gray;
-    min-width: 20px;
-    min-height: 20px;
-    display: flex;
-    margin-right: 2px;
+    width: 1fr;
+    height: 1fr;
 }

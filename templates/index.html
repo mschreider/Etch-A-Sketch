@@ -5,18 +5,24 @@
         <link rel="stylesheet" href="../static/main.css">
     </head>
     <body>
-        <div class="container"></div>
+        <div class="container" id="container"></div>
         
 
         <script>
             var grid = [];
             var row = [];
-            var x = 16;
-            var y = 16;
+            //var width = parseInt(prompt("Enter how many boxes wide."));
+            var width = 16
+            //(x,y) = (row, column)
+            const container = document.getElementById("container");
+            container.style.gridTemplateRows = `repeat(${width}, auto)`;
+            container.style.gridTemplateColumns = `repeat(${width}, auto)`;
             
-            for(let i=0; i<x; i++){
-                for(let j=0; j<y; j++){
-                    const container = document.querySelector(".container");
+
+            
+            for(let i=0; i<width; i++){
+                for(let j=0; j<width; j++){
+                    
                     const box = document.createElement('div');
                     box.classList.add('grid');
                     box.textContent = `box[${ i }][${ j }]`;

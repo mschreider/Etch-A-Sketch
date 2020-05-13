@@ -5,32 +5,44 @@
         <link rel="stylesheet" href="../static/main.css">
     </head>
     <body>
+        <button class="reset">Reset</button>
         <div class="container" id="container"></div>
         
-
         <script>
-            var grid = [];
-            var row = [];
-            //var width = parseInt(prompt("Enter how many boxes wide."));
-            var width = 16
+            var width = 8;
             //(x,y) = (row, column)
-            const container = document.getElementById("container");
-            container.style.gridTemplateRows = `repeat(${width}, auto)`;
-            container.style.gridTemplateColumns = `repeat(${width}, auto)`;
-            
-
+            var row_size = 600/width + "px";
+            var column_size = 600/width + "px";
+            var container = document.getElementById("container");
+            container.style.gridTemplateRows = `repeat(${width}, ${row_size})`;
+            container.style.gridTemplateColumns = `repeat(${width}, ${column_size})`;
             
             for(let i=0; i<width; i++){
                 for(let j=0; j<width; j++){
                     
-                    const box = document.createElement('div');
+                    var box = document.createElement('div');
                     box.classList.add('grid');
-                    box.textContent = `box[${ i }][${ j }]`;
                     box.setAttribute('id', `box[${ i }][${ j }]`);
                     container.appendChild(box);
                 }
-                
             }
+
+            const boxes = document.querySelectorAll(".grid");
+            boxes.forEach((box) => {
+                box.addEventListener('mouseover', function() {
+                    box.style.backgroundColor = "black";
+                });
+                
+                const reset_btn = document.querySelector(".reset");
+                reset_btn.addEventListener('click', function() {
+                    box.style.backgroundColor = 'white';
+
+                });
+
+            });
+
+            
+
         </script>
     </body>
 </html>

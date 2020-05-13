@@ -1,12 +1,19 @@
-.container {
-    display: grid;
+body{
+    text-align: center;
 }
 
-.grid:hover {
-    color: palegreen;
+.container {
+    display: grid;
+    width: 600px;
+    height: 600px;
+    margin: auto;
+    border: 1px solid black;
 }
 .grid {
-    border: 1px solid gray;
-    width: 1fr;
-    height: 1fr;
+    border: 1px solid black;
+}
+
+button {
+    margin: 30px;
+    font-size: large;
 }

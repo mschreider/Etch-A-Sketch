@@ -1,5 +1,17 @@
 body{
     text-align: center;
+    background: #494b4f;
+    font-family: monospace;
+    color: #81d8d0;
+}
+
+header {
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+h1{
+    font-size: 40px;
 }
 
 .container {
@@ -7,13 +19,15 @@ body{
     width: 600px;
     height: 600px;
     margin: auto;
-    border: 1px solid black;
+    margin-bottom: 40px;
+    border: 5px solid rgb(179, 101, 127);
+    background-color: white;
 }
 .grid {
-    border: 1px solid black;
+    background-color: transparent
 }
 
 button {
-    margin: 30px;
+    margin: 20px;
     font-size: large;
 }

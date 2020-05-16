@@ -10,3 +10,6 @@ Concepts involved:
 * Functions, Variables
 
 ## Initial Page
+![Screen Shot 2020-05-16 at 10 36 59 AM](https://user-images.githubusercontent.com/60115158/82122460-d5a1e400-9761-11ea-9896-3742d7dd0a42.png)
+
+##
